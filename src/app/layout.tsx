@@ -17,16 +17,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='container flex min-h-screen min-w-full flex-col pl-24 pr-24'>
-          <nav className='p-8'>
-            <ul className='flex items-center flex-row'>
-              <li className='p-4'><a href="/">Front page</a></li>
-              <li className='p-4'><a href="/stocks">Stocks</a></li>
-            </ul>
-          </nav>
-          <div>
-            {children}
+      <div className="w-screen h-screen bg-white flex-col justify-start items-start inline-flex">
+          <div className="w-screen h-[50px] border-b border-black justify-between items-start inline-flex">
+            <div className="w-[1280px] self-stretch px-[100px] justify-between items-start flex">
+              <div className="grow shrink basis-0 self-stretch justify-start items-center flex">
+                <a href="/" className="text-black text-xl font-normal font-['Inter']">C:/stocks</a>
+              </div>
+              <div className="grow shrink basis-0 self-stretch justify-end items-center gap-[25px] flex">
+                <a href="/dashboard" className="text-black text-xl font-normal font-['Inter']">Dashboard</a>
+                <a href="/stocks" className="text-black text-xl font-normal font-['Inter']">Stocks</a>
+              </div>
+            </div>
           </div>
+          {children}
         </div>
       </body>
     </html>
