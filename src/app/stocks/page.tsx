@@ -1,9 +1,3 @@
-interface Stocks extends Array<Stock> {}
-interface Stock {
-    name: string,
-    prices: number[]
-}
-
 async function fetchPrices(): Promise<Stocks> {
     const res = await fetch("http://127.0.0.1:3000/api/stocks/prices", { cache: 'no-cache'});
 
@@ -24,7 +18,7 @@ function TableComponent(stock: Stock) {
                 </tr>
             </thead>
             <tbody>
-                {stock.prices.map((price, i) => (
+                {stock.priceHistory.map((price, i) => (
                     <tr key={stock.name + '-' + i}>
                         <td>{stock.name}</td>
                         <td>{price}</td>
