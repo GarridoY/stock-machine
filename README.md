@@ -26,6 +26,8 @@ Create UI for:
 - Showing bought stock price history
 
 ### Other
+- Add Message Broker system to handle requests
+- - RabbitMQ or Apache Kafka
 - Fetch stock prices every X seconds
 - Generate new stocks with new prices on stock price fetch
 - Introduce more sophisticated price generation
