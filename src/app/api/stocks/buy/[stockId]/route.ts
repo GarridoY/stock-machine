@@ -12,6 +12,6 @@ export async function POST(request: Request,
 	if (success) {
 		return NextResponse.json(success);
 	} else {
-		return NextResponse.json("Insufficient funds");
+		return badRequest("Insufficient funds");
 	}
 }
