@@ -1,5 +1,5 @@
 async function fetchPrices(): Promise<Stocks> {
-    const res = await fetch("http://127.0.0.1:3000/api/stocks/prices", { cache: 'no-cache'});
+    const res = await fetch("http://127.0.0.1:3000/api/stocks", { cache: 'no-cache'});
 
     if (!res.ok) {
         throw new Error("Could not fetch prices.");
